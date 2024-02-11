@@ -13,6 +13,7 @@ set clipboard=unnamedplus
 set splitright
 set splitbelow
 set termwinkey=<C-k> "terminal-job modeで<C-w>を使う
+set backspace=indent,eol,start
 
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'tomasr/molokai'
