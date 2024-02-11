@@ -33,8 +33,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'cohama/lexima.vim'
 call plug#end()
 
-colorscheme molokai
-
 let mapleader="\<Space>"
 nnoremap <ESC><ESC> :noh<CR>
 nnoremap <silent> <C-p> :MarkdownPreviewToggle<CR>
@@ -65,6 +63,8 @@ vnoremap x "_x
 vnoremap < <gv
 vnoremap > >gv
 
+colorscheme molokai
+hi MatchParen ctermbg=none ctermfg=208
 let g:airline_theme = 'badwolf'
 let g:airline_section_b = airline#section#create([])
 let g:airline_section_x = airline#section#create([])
