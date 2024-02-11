@@ -66,6 +66,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 let g:airline_theme = 'badwolf'
+let g:airline_section_b = airline#section#create([])
 let g:airline_section_x = airline#section#create([])
 let g:airline_section_y = airline#section#create([])
 let g:airline_section_z = airline#section#create([])
