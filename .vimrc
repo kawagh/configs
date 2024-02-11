@@ -29,6 +29,7 @@ Plug 'inside/vim-search-pulse'
 Plug 'kawagh/popcontexts.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'cohama/lexima.vim'
 call plug#end()
 
 colorscheme molokai
