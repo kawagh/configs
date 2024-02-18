@@ -8,3 +8,4 @@ for file in .*; do
   [ "$file" = ".." ] && continue
   ln -sfv ${PWD}/$file ~/
 done
+ln -sfv ${PWD}/vscode/settings.json ~/.config/Code/User/settings.json

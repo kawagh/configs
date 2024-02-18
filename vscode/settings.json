@@ -1,0 +1,14 @@
+{
+    // vim extensionを入れた状態でも<C-p>のquickOpenを有効にする
+    // https://github.com/VSCodeVim/Vim/issues/8574#issuecomment-1715573738
+    "vim.normalModeKeyBindingsNonRecursive": [
+            {
+                "before": [
+                    "<C-p>"
+                ],
+                "commands": [
+                    "workbench.action.quickOpen",
+                ]
+            },
+        ],
+}
