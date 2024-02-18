@@ -12,4 +12,5 @@
             },
         ],
     "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true
 }
