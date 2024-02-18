@@ -9,3 +9,4 @@ for file in .*; do
   ln -sfv ${PWD}/$file ~/
 done
 ln -sfv ${PWD}/vscode/settings.json ~/.config/Code/User/settings.json
+ln -sfv ${PWD}/vscode/keybindings.json ~/.config/Code/User/keybindings.json
