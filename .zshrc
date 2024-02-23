@@ -1,3 +1,5 @@
+autoload -Uz compinit && compinit
+
 PROMPT='%F{cyan}%~
 $%F{white} '
 
