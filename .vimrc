@@ -9,7 +9,7 @@ set expandtab "タブを空白文字に置き換え
 set laststatus=2
 set noswapfile
 set wildmenu
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 set splitright
 set splitbelow
 set termwinkey=<C-k> "terminal-job modeで<C-w>を使う
