@@ -29,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'inside/vim-search-pulse'
 Plug 'kawagh/popcontexts.vim'
+Plug 'kawagh/somelines.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cohama/lexima.vim'
@@ -56,6 +57,7 @@ noremap <leader>s :split<CR>
 noremap <leader>v :vsplit<CR>
 noremap <leader>f :Files<CR>
 nnoremap <leader>c :Pctx<CR>
+nnoremap <leader>S :Sisl<CR>
 " 検索フォーカス
 nnoremap n nzzzv
 nnoremap N Nzzzv
