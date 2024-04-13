@@ -39,7 +39,11 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'sqls-server/sqls.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
+
+" psf/black
+autocmd BufWritePost *.py silent! execute ':Black'
 
 let mapleader="\<Space>"
 nnoremap <ESC><ESC> :noh<CR>
