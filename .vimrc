@@ -35,13 +35,35 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cohama/lexima.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'sqls-server/sqls.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'vim-denops/denops.vim'
+Plug 'Shougo/ddc.vim'
+" ddc.ui
+Plug 'Shougo/ddc-ui-native'
+" ddc.filter
+Plug 'Shougo/ddc-filter-matcher_head'
+" ddc.sources
+Plug 'shun/ddc-source-vim-lsp'
+Plug 'delphinus/ddc-source-tmux'
 call plug#end()
+
+call ddc#custom#patch_global('ui', 'native')
+call ddc#custom#patch_global('sources', ['vim-lsp','tmux'])
+call ddc#custom#patch_global('sourceOptions', #{
+            \   vim-lsp: #{
+            \     mark: 'lsp',
+            \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
+            \   },
+            \   tmux: #{
+            \     mark: 'tmux',
+            \     matchers: ['matcher_head'],
+            \   },
+            \ }
+            \ )
+call ddc#enable()
 
 " psf/black
 autocmd BufWritePost *.py silent! execute ':Black'
