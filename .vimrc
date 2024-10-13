@@ -21,7 +21,8 @@ Plug 'tomasr/molokai'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
+Plug 'lambdalisue/vim-fern'
 Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mattn/vim-maketable'
@@ -48,8 +49,9 @@ autocmd BufWritePost *.py silent! execute ':Black'
 let mapleader="\<Space>"
 nnoremap <ESC><ESC> :noh<CR>
 nnoremap <silent> <C-p> :MarkdownPreviewToggle<CR>
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nnoremap <leader>e :NERDTreeToggle %<CR>
+" nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" nnoremap <leader>e :NERDTreeToggle %<CR>
+nnoremap <silent><C-e> :Fern . -drawer -stay -toggle<CR>
 inoremap <Esc> <Esc> :call system('ibus engine "xkb:us::eng"')<CR>
 nnoremap <silent> <leader>t :vert terminal<CR>
 nnoremap <silent> <leader>j :terminal<CR>
