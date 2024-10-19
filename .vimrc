@@ -121,3 +121,5 @@ let g:airline_section_x = airline#section#create([])
 let g:airline_section_y = airline#section#create([])
 let g:airline_section_z = airline#section#create([])
 let g:airline#extensions#tabline#enabled = 1
+
+let g:lsp_diagnostics_virtual_text_align = "after"
