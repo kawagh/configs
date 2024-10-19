@@ -48,18 +48,30 @@ Plug 'Shougo/ddc-filter-matcher_head'
 " ddc.sources
 Plug 'shun/ddc-source-vim-lsp'
 Plug 'delphinus/ddc-source-tmux'
+Plug 'LumaKernel/ddc-source-file'
+" ddc.sorters
+Plug 'Shougo/ddc-filter-sorter_rank'
 call plug#end()
 
 call ddc#custom#patch_global('ui', 'native')
-call ddc#custom#patch_global('sources', ['vim-lsp','tmux'])
+call ddc#custom#patch_global('sources', ['vim-lsp','tmux','file'])
+
 call ddc#custom#patch_global('sourceOptions', #{
+            \   _: #{
+            \     sorters: ['sorter_rank'],
+            \   },
             \   vim-lsp: #{
             \     mark: 'lsp',
             \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
+            \     matchers: ['matcher_head'],
             \   },
             \   tmux: #{
             \     mark: 'tmux',
             \     matchers: ['matcher_head'],
+            \   },
+            \   file: #{
+            \     mark: 'file',
+            \     forceCompletionPattern: "\\S/\\S*",
             \   },
             \ }
             \ )
