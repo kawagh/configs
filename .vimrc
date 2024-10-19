@@ -84,6 +84,8 @@ nnoremap <ESC><ESC> :noh<CR>
 nnoremap <silent> <C-p> :MarkdownPreviewToggle<CR>
 " nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " nnoremap <leader>e :NERDTreeToggle %<CR>
+nnoremap <silent>gd :LspDefinition<CR>
+nnoremap <silent>gr :LspReferences<CR>
 nnoremap <silent><C-e> :Fern . -drawer -stay -toggle<CR>
 inoremap <Esc> <Esc> :call system('ibus engine "xkb:us::eng"')<CR>
 nnoremap <silent> <leader>t :vert terminal<CR>
