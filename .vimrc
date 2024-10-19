@@ -61,16 +61,16 @@ call ddc#custom#patch_global('sourceOptions', #{
             \     sorters: ['sorter_rank'],
             \   },
             \   vim-lsp: #{
-            \     mark: 'lsp',
+            \     mark: '[LSP]',
             \     forceCompletionPattern: '\.\w*|:\w*|->\w*',
             \     matchers: ['matcher_head'],
             \   },
             \   tmux: #{
-            \     mark: 'tmux',
+            \     mark: '[T]',
             \     matchers: ['matcher_head'],
             \   },
             \   file: #{
-            \     mark: 'file',
+            \     mark: '[F]',
             \     forceCompletionPattern: "\\S/\\S*",
             \   },
             \ }
