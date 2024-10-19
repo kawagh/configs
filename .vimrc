@@ -37,7 +37,6 @@ Plug 'cohama/lexima.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'sqls-server/sqls.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'vim-denops/denops.vim'
 Plug 'Shougo/ddc.vim'
