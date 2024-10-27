@@ -31,6 +31,7 @@ Plug 'tpope/vim-commentary'
 Plug 'inside/vim-search-pulse'
 Plug 'kawagh/popcontexts.vim'
 Plug 'kawagh/somelines.vim'
+Plug 'kawagh/ddc-myhandson'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'cohama/lexima.vim'
@@ -53,7 +54,12 @@ Plug 'Shougo/ddc-filter-sorter_rank'
 call plug#end()
 
 call ddc#custom#patch_global('ui', 'native')
-call ddc#custom#patch_global('sources', ['vim-lsp','tmux','file'])
+call ddc#custom#patch_global('sources', [
+            \ 'vim-lsp',
+            \ 'tmux',
+            \ 'file',
+            \ 'myhandson'
+            \ ])
 
 call ddc#custom#patch_global('sourceOptions', #{
             \   _: #{
