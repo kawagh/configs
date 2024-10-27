@@ -26,6 +26,7 @@ Plug 'lambdalisue/vim-fern'
 Plug 'machakann/vim-highlightedyank'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mattn/vim-maketable'
+Plug 'mattn/vim-sonictemplate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'inside/vim-search-pulse'
@@ -132,3 +133,7 @@ let g:lsp_diagnostics_virtual_text_enabled = 0
 " let g:lsp_diagnostics_virtual_text_align = "after"
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_diagnostics_signs_enabled = 0
+
+let g:sonictemplate_vim_template_dir = [
+      \ '~/templates'
+      \]
