@@ -10,3 +10,5 @@ for file in .*; do
 done
 ln -sfv ${PWD}/vscode/settings.json ~/.config/Code/User/settings.json
 ln -sfv ${PWD}/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
+ln -sfv ${PWD}/nvim/init.lua ~/.config/nvim/init.lua
