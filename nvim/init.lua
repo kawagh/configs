@@ -9,7 +9,7 @@ Plug("https://github.com/junegunn/fzf.vim.git")
 Plug("https://github.com/nvim-treesitter/nvim-treesitter.git")
 Plug("https://github.com/machakann/vim-highlightedyank.git")
 Plug("https://github.com:lambdalisue/vim-fern.git")
-Plug("https://github.com/airblade/vim-gitgutter.git")
+Plug("https://github.com/lewis6991/gitsigns.nvim.git")
 Plug("https://github.com/akinsho/bufferline.nvim.git")
 Plug("nvim-tree/nvim-web-devicons")
 
@@ -29,3 +29,4 @@ vim.api.nvim_set_keymap("n", "<S-Tab>", "<cmd>bprevious<CR>", { noremap = true }
 vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Fern . -drawer -stay -toggle<CR>", { noremap = true })
 
 require("bufferline").setup({})
+require('gitsigns').setup()
