@@ -29,6 +29,7 @@ Plug("https://github.com/Shougo/ddc.vim.git")
 Plug("https://github.com/Shougo/ddc-ui-native.git")
 Plug("https://github.com/LumaKernel/ddc-source-file.git")
 Plug("https://github.com/delphinus/ddc-source-tmux.git")
+Plug("https://github.com/Shougo/ddc-source-lsp.git")
 Plug("https://github.com/Shougo/ddc-filter-matcher_head.git")
 Plug("https://github.com/Shougo/ddc-filter-sorter_rank.git")
 
@@ -37,12 +38,17 @@ vim.call("plug#end")
 vim.fn["ddc#custom#patch_global"]({
 	ui = "native",
 	sources = {
+		"lsp",
 		"tmux",
 		"file",
 	},
 	sourceOptions = {
 		_ = {
 			sorters = { "sorter_rank" },
+		},
+		lsp = {
+			mark = "[LSP]",
+			forceCompletionPattern = "\\.\\w*|:\\w*|->\\w*",
 		},
 		tmux = {
 			mark = "[T]",
