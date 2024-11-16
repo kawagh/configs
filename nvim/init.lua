@@ -32,6 +32,7 @@ Plug("https://github.com/delphinus/ddc-source-tmux.git")
 Plug("https://github.com/Shougo/ddc-source-lsp.git")
 Plug("https://github.com/Shougo/ddc-filter-matcher_head.git")
 Plug("https://github.com/Shougo/ddc-filter-sorter_rank.git")
+Plug("https://github.com/matsui54/denops-popup-preview.vim")
 
 vim.call("plug#end")
 
@@ -62,6 +63,7 @@ vim.fn["ddc#custom#patch_global"]({
 	},
 })
 vim.fn["ddc#enable"]()
+vim.fn["popup_preview#enable"]()
 vim.cmd("colorscheme habamax")
 
 vim.opt.number = true
