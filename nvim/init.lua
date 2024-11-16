@@ -24,9 +24,38 @@ Plug("https://github.com/inside/vim-search-pulse.git")
 Plug("https://github.com/cohama/lexima.vim.git")
 Plug("https://github.com/neovim/nvim-lspconfig.git")
 Plug("https://github.com/williamboman/mason.nvim.git")
+Plug("https://github.com/vim-denops/denops.vim.git")
+Plug("https://github.com/Shougo/ddc.vim.git")
+Plug("https://github.com/Shougo/ddc-ui-native.git")
+Plug("https://github.com/LumaKernel/ddc-source-file.git")
+Plug("https://github.com/delphinus/ddc-source-tmux.git")
+Plug("https://github.com/Shougo/ddc-filter-matcher_head.git")
+Plug("https://github.com/Shougo/ddc-filter-sorter_rank.git")
 
 vim.call("plug#end")
 
+vim.fn["ddc#custom#patch_global"]({
+	ui = "native",
+	sources = {
+		"tmux",
+		"file",
+	},
+	sourceOptions = {
+		_ = {
+			sorters = { "sorter_rank" },
+		},
+		tmux = {
+			mark = "[T]",
+			forceCompletionPattern = "\\S/\\S*",
+			matchers = { "matcher_head" },
+		},
+		file = {
+			mark = "[F]",
+			forceCompletionPattern = "\\S/\\S*",
+		},
+	},
+})
+vim.fn["ddc#enable"]()
 vim.cmd("colorscheme habamax")
 
 vim.opt.number = true
