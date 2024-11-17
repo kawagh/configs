@@ -33,6 +33,7 @@ Plug("https://github.com/Shougo/ddc-source-lsp.git")
 Plug("https://github.com/Shougo/ddc-filter-matcher_head.git")
 Plug("https://github.com/Shougo/ddc-filter-sorter_rank.git")
 Plug("https://github.com/matsui54/denops-popup-preview.vim")
+Plug("https://github.com/ckipp01/stylua-nvim")
 
 vim.call("plug#end")
 
@@ -66,13 +67,14 @@ vim.fn["ddc#enable"]()
 vim.fn["popup_preview#enable"]()
 vim.cmd("colorscheme habamax")
 
-vim.cmd([[
-  augroup FormatLua
-    autocmd!
-    autocmd BufWritePre *.lua silent! execute '%!stylua -'
-  augroup END
-]])
-
+vim.api.nvim_create_augroup("lua", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = "lua",
+	pattern = { "*.lua" },
+	callback = function()
+		require("stylua-nvim").format_file()
+	end,
+})
 vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
