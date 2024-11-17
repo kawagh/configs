@@ -41,8 +41,8 @@ vim.fn["ddc#custom#patch_global"]({
     ui = "native",
     sources = {
         "lsp",
-        "tmux",
         "file",
+        "tmux",
     },
     sourceOptions = {
         _ = {
