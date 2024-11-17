@@ -80,6 +80,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.clipboard:append("unnamedplus")
+vim.opt.laststatus = 0
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap("n", "<Leader>f", "<cmd>GFiles<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>F", "<cmd>Rg<CR>", { noremap = true })
