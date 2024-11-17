@@ -66,6 +66,13 @@ vim.fn["ddc#enable"]()
 vim.fn["popup_preview#enable"]()
 vim.cmd("colorscheme habamax")
 
+vim.cmd([[
+  augroup FormatLua
+    autocmd!
+    autocmd BufWritePre *.lua silent! execute '%!stylua -'
+  augroup END
+]])
+
 vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
