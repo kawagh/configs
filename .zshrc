@@ -8,6 +8,7 @@ PROMPT='%F{cyan}%~ %F{magenta}${vcs_info_msg_0_}
 %F{cyan}$%F{white} '
 
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin"
 eval "$(rbenv init - zsh)"
 
 alias gg='cd $(ghq list -p | fzf)'
