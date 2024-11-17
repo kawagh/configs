@@ -38,30 +38,30 @@ Plug("https://github.com/ckipp01/stylua-nvim")
 vim.call("plug#end")
 
 vim.fn["ddc#custom#patch_global"]({
-	ui = "native",
-	sources = {
-		"lsp",
-		"tmux",
-		"file",
-	},
-	sourceOptions = {
-		_ = {
-			sorters = { "sorter_rank" },
-		},
-		lsp = {
-			mark = "[LSP]",
-			forceCompletionPattern = "\\.\\w*|:\\w*|->\\w*",
-		},
-		tmux = {
-			mark = "[T]",
-			forceCompletionPattern = "\\S/\\S*",
-			matchers = { "matcher_head" },
-		},
-		file = {
-			mark = "[F]",
-			forceCompletionPattern = "\\S/\\S*",
-		},
-	},
+    ui = "native",
+    sources = {
+        "lsp",
+        "tmux",
+        "file",
+    },
+    sourceOptions = {
+        _ = {
+            sorters = { "sorter_rank" },
+        },
+        lsp = {
+            mark = "[LSP]",
+            forceCompletionPattern = "\\.\\w*|:\\w*|->\\w*",
+        },
+        tmux = {
+            mark = "[T]",
+            forceCompletionPattern = "\\S/\\S*",
+            matchers = { "matcher_head" },
+        },
+        file = {
+            mark = "[F]",
+            forceCompletionPattern = "\\S/\\S*",
+        },
+    },
 })
 vim.fn["ddc#enable"]()
 vim.fn["popup_preview#enable"]()
@@ -69,11 +69,11 @@ vim.cmd("colorscheme habamax")
 
 vim.api.nvim_create_augroup("lua", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
-	group = "lua",
-	pattern = { "*.lua" },
-	callback = function()
-		require("stylua-nvim").format_file()
-	end,
+    group = "lua",
+    pattern = { "*.lua" },
+    callback = function()
+        require("stylua-nvim").format_file()
+    end,
 })
 vim.opt.number = true
 vim.opt.ignorecase = true
