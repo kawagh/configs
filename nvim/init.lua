@@ -82,11 +82,11 @@ vim.opt.termguicolors = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.laststatus = 0
 vim.g.mapleader = " "
-vim.api.nvim_set_keymap("n", "<Leader>f", "<cmd>GFiles<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>F", "<cmd>Rg<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Tab>", "<cmd>bnext<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<cmd>bprevious<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Fern . -drawer -stay -toggle<CR>", { noremap = true })
+vim.keymap.set("n", "<Leader>f", "<cmd>GFiles<CR>", { noremap = true })
+vim.keymap.set("n", "<Leader>F", "<cmd>Rg<CR>", { noremap = true })
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", { noremap = true })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<CR>", { noremap = true })
+vim.keymap.set("n", "<C-e>", "<cmd>Fern . -drawer -stay -toggle<CR>", { noremap = true })
 
 require("bufferline").setup({})
 require("gitsigns").setup()
